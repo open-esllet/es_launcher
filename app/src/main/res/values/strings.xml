@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">EsLauncher</string>
+    <string name="sidebar_item_user">USER</string>
+    <string name="sidebar_item_write">WRITE</string>
+    <string name="sidebar_item_reader_wx">WX Reader</string>
+    <string name="sidebar_item_reader_local">Local Reader</string>
+    <string name="sidebar_item_learn">LEARN</string>
+    <string name="sidebar_item_storage">STORAGE</string>
+    <string name="sidebar_item_settings">SETTINGS</string>
+
+    <string name="dlg_title_wifi_need_connect">WIFI is not connected</string>
+    <string name="dlg_msg_wifi_need_connect">Network connection is required for this feature. Would you like to open network settings now?</string>
+
+    <string name="info_dev_name">Device Name</string>
+    <string name="info_languages">Languages</string>
+    <string name="info_screen_size">Screen size</string>
+    <string name="info_resolution">Resolution</string>
+    <string name="info_ram">RAM</string>
+    <string name="info_storage">Internal Storage</string>
+    <string name="info_system_version">System version</string>
+    <string name="info_android_version">Android version</string>
+    <string name="info_hardware_version">Hardware version</string>
+    <string name="info_model">Model</string>
+    <string name="info_serial">Serial</string>
+    <string name="info_wifi_mac">WLAN MAC address</string>
+    <string name="info_battery">Battery capacity</string>
+    <string name="info_unavailable">Unavailable</string>
+
+    <string name="note_add_note">Start a new note</string>
+
+    <string name="toast_app_not_installed">The app not installed</string>
+    <string name="toast_app_cannot_open">The app cann\'t open</string>
+    <string name="toast_note_saving">Saving note, please wait...</string>
+    <string name="info_screen_lock">Set screen lock</string>
+    <string name="info_date_time">Date Time</string>
+</resources>

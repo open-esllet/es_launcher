@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Esllet桌面</string>
+    <string name="sidebar_item_user">用户</string>
+    <string name="sidebar_item_write">笔记</string>
+    <string name="sidebar_item_reader_wx">微信读书</string>
+    <string name="sidebar_item_reader_local">本地阅读</string>
+    <string name="sidebar_item_learn">学习</string>
+    <string name="sidebar_item_storage">存储</string>
+    <string name="sidebar_item_settings">设置</string>
+
+    <string name="dlg_title_wifi_need_connect">WIFI未连接</string>
+    <string name="dlg_msg_wifi_need_connect">该功能需要连网后使用，是否前往配网页？</string>
+
+    <string name="info_dev_name">设备名称</string>
+    <string name="info_languages">语言</string>
+    <string name="info_screen_size">屏幕尺寸</string>
+    <string name="info_resolution">分辨率</string>
+    <string name="info_ram">运行内存</string>
+    <string name="info_storage">内部存储</string>
+    <string name="info_system_version">系统版本</string>
+    <string name="info_android_version">Android版本</string>
+    <string name="info_hardware_version">硬件版本</string>
+    <string name="info_model">型号</string>
+    <string name="info_serial">序列号</string>
+    <string name="info_wifi_mac">WLAN 硬件地址</string>
+    <string name="info_battery">电池容量</string>
+    <string name="info_unavailable">不可用</string>
+    <string name="note_add_note">开始新笔记</string>
+
+    <string name="toast_app_not_installed">该APP未安装</string>
+    <string name="toast_app_cannot_open">无法打开APP</string>
+    <string name="toast_note_saving">笔记正在保存，请稍后...</string>
+    <string name="info_screen_lock">设置屏幕锁</string>
+    <string name="info_date_time">时间日期</string>
+</resources>

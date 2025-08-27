@@ -78,9 +78,9 @@ object NoteCpDs {
     }
 
     @SuppressLint("Range")
-    fun getNoteStream(): List<NoteEntity> {
+    fun getNoteStream(sortOrder: String? = null): List<NoteEntity> {
         val list = mutableListOf<NoteEntity>()
-        val c = resolver.query(NoteContract.CU_NOTE, null, null, null, null) ?: return list
+        val c = resolver.query(NoteContract.CU_NOTE, null, null, null, sortOrder) ?: return list
 
         while (c.moveToNext()) {
             val note = NoteEntity(c.getLong(c.getColumnIndex(NoteContract.Note.ID)),

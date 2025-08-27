@@ -115,7 +115,7 @@ class NoteVm private constructor(): ViewModel() {
         }
     }
 
-    private suspend fun reloadNote(id: Long): NoteItem? {
+    private suspend fun reloadNote(id: Long, resort: Boolean = false): NoteItem? {
         var item: NoteItem? = null
         noteStatus.value.items.also {
             var itemIndex: Int = -1
@@ -132,6 +132,11 @@ class NoteVm private constructor(): ViewModel() {
                     e.saving != 0, e.updatedTime)
                 it[itemIndex] = item!!
                 LogUtil.d(TAG, "reloadNote() item = $item")
+                if (resort) {
+                    LogUtil.d(TAG, "reloadNote() resort...")
+                    // move recent update item to the first position
+                    it.add(1, it.removeAt(itemIndex))
+                }
             }
         }
         return item
@@ -175,7 +180,7 @@ class NoteVm private constructor(): ViewModel() {
         }
 
         if (spentMillis == 0L) {
-            val item = reloadNote(id)
+            val item = reloadNote(id, true)
             if (item == null) {
                 LogUtil.d(TAG, "calcReloadDelayMills() item not in state yet, reload in 500ms")
                 return 500L
@@ -183,7 +188,7 @@ class NoteVm private constructor(): ViewModel() {
 
             return 2000L
         } else {
-            if (isNoteSaving(id)) {
+            if (isNoteSaving(id, true)) {
                 return 1000L
             }
         }
@@ -191,8 +196,8 @@ class NoteVm private constructor(): ViewModel() {
         return 0
     }
 
-    suspend fun isNoteSaving(id: Long) : Boolean {
-        val item = reloadNote(id)
+    suspend fun isNoteSaving(id: Long, resort: Boolean = false) : Boolean {
+        val item = reloadNote(id, resort)
         val saving = item != null && item.saving
         LogUtil.d(TAG, "isNoteSaving($id) = $saving")
 
@@ -216,7 +221,7 @@ class NoteVm private constructor(): ViewModel() {
         noteStatus.value.items.apply {
             val index = indexOfFirst { it.id == id }
             removeAt(index)
-            add(index, NoteItem(newItem.id, newItem.pageNo, newItem.imgPaths,
+            add(1, NoteItem(newItem.id, newItem.pageNo, newItem.imgPaths,
                 newItem.name, newItem.saving != 0, System.currentTimeMillis()))
             LogUtil.d(TAG, "updateNote() item.id = $id")
         }

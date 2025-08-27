@@ -32,6 +32,7 @@
 
 package com.esllet.launcher.repo
 
+import com.esllet.launcher.ds.NoteContract
 import com.esllet.launcher.ds.NoteCpDs
 import com.esllet.launcher.entity.FolderEntity
 import com.esllet.launcher.entity.NoteEntity
@@ -62,7 +63,7 @@ class NoteCpRepo(private val ds: NoteCpDs) : NoteRepo {
     }
 
     override suspend fun getNoteStream(): List<NoteEntity> {
-        return ds.getNoteStream()
+        return ds.getNoteStream("${NoteContract.Note.UPDATED_TIME} DESC")
     }
 
     override suspend fun getNote(id:Long): NoteEntity? {

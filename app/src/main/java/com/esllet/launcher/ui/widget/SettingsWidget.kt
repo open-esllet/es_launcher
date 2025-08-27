@@ -82,6 +82,14 @@ class SettingsWidget {
                     context.startActivity(intent)
                 }
                 Box(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp).height(1.dp).background(Color.Gray))
+                Item(stringResource(R.string.info_inputmethod), "") {
+                    Intent().apply {
+                        setComponent(ComponentName("com.android.settings", "com.android.settings.SubSettings"))
+                        putExtra(":settings:show_fragment", "com.android.settings.inputmethod.VirtualKeyboardFragment")
+                        context.startActivity(this)
+                    }
+                }
+                Box(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp).height(1.dp).background(Color.Gray))
                 Item(stringResource(R.string.info_date_time), "") {
                     val intent = Intent(Settings.ACTION_DATE_SETTINGS)
                     context.startActivity(intent)

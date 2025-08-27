@@ -13,6 +13,7 @@
 
     <string name="info_dev_name">Device Name</string>
     <string name="info_languages">Languages</string>
+    <string name="info_inputmethod">Input method</string>
     <string name="info_screen_size">Screen size</string>
     <string name="info_resolution">Resolution</string>
     <string name="info_ram">RAM</string>

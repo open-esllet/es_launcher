@@ -13,6 +13,7 @@
 
     <string name="info_dev_name">设备名称</string>
     <string name="info_languages">语言</string>
+    <string name="info_inputmethod">输入法</string>
     <string name="info_screen_size">屏幕尺寸</string>
     <string name="info_resolution">分辨率</string>
     <string name="info_ram">运行内存</string>

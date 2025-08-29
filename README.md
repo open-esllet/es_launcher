@@ -1,6 +1,13 @@
-# NOTE
+# About ESBook
+EsBook is a device specifically designed for e-paper application development, offering powerful performance and an easy learning curve. Click the link below to get your development toolkit now and create stunning e-paper applications!
+
+https://item.taobao.com/item.htm?id=971200577187
+
+# About EsLauncher
 
 The EsLauncher app, part of the ESBook ecosystem, is primarily designed for display the homepage.
+
+![](imgs/launcher.png)
 
 # GRADLE Configuration
 
